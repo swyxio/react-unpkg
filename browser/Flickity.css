@@ -1,0 +1,9 @@
+.carousel-cell {
+  width: 50%; /* half-width */
+  height: 400px;
+  margin-right: 10px;
+}
+
+.carousel-cell.is-selected {
+  background: #ed2;
+}

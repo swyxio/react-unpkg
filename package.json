@@ -1,0 +1,44 @@
+{
+  "name": "react-presentation-no-bundling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "webpack -w & nodemon server/app.js",
+    "start": "npm run start:dev",
+    "start:prod": "node server/app.js",
+    "build": "NODE_ENV='production' webpack"
+  },
+  "keywords": [],
+  "author": "“Channing <“magic.mike@gmail.com”> (“http://www.magicmikemovie.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "font-loader": "^0.1.2",
+    "image-webpack-loader": "^4.0.0",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "flickity": "^2.0.10",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.3.1",
+    "leaflet": "^1.3.1",
+    "masonry-layout": "^4.2.1",
+    "popper.js": "^1.12.9",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "tippy.js": "^2.1.1",
+    "video.js": "^6.6.3",
+    "webpack-visualizer-plugin": "^0.1.11"
+  }
+}
