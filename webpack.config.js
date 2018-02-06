@@ -44,9 +44,9 @@ module.exports = {
   plugins: isProd
     ? [
         new HtmlWebpackPlugin(),
-        new DynamicCdnWebpackPlugin({
-          // verbose: true
-        }),
+        // new DynamicCdnWebpackPlugin({
+        //   // verbose: true
+        // }),
         new webpack.DefinePlugin({
           "process.env.NODE_ENV": JSON.stringify("production")
         }),

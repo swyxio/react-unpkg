@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Plain from "./Plain";
-import About from "./About";
+import ReduxApp from "./About";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const BasicExample = () => (
@@ -9,17 +9,17 @@ const BasicExample = () => (
     <div>
       <ul>
         <li>
-          <Link to="/">Plain</Link>
+          <Link to="/">ReduxApp</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Plain</Link>
         </li>
       </ul>
 
       <hr />
       <Switch>
-        <Route path="/about" component={About} />
-        <Route component={Plain} />
+        <Route path="/about" component={Plain} />
+        <Route component={ReduxApp} />
       </Switch>
     </div>
   </Router>
