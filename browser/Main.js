@@ -1,6 +1,6 @@
 import React from "react";
 import bootstrap from "bootstrap";
-import { JumboTron, DropDown, Modal } from "./Components";
+import { JumboTron, DropDown } from "./Components";
 import Tippy from "./Tippy";
 import Video from "./Video";
 import Flickity from "./Flickity";
@@ -27,7 +27,6 @@ export default class Main extends React.Component {
           "Bootstrap Components",
           <div className="col">
             <DropDown />
-            <Modal />
           </div>
         )}
         {section(

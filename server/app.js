@@ -8,6 +8,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "..", "docs")));
 
+/* this is the catchall to deliver index.html */
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../docs/index.html"));
+});
 // failed to catch req above means 404, forward to error handler
 app.use(function(req, res, next) {
   var err = new Error("Not Found");

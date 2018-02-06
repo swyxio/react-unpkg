@@ -12,9 +12,7 @@ export const JumboTron = () => (
     <hr className="my-4" />
     <p>See the bundle size just with this alone</p>
     <p className="lead">
-      <a className="btn btn-primary btn-lg" href="#" role="button">
-        Learn more
-      </a>
+      <Modal />
     </p>
   </div>
 );

@@ -1,12 +1,15 @@
 const webpack = require("webpack");
-const isProd = process.env.NODE_ENV === "production";
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DynamicCdnWebpackPlugin = require("dynamic-cdn-webpack-plugin");
 var Visualizer = require("webpack-visualizer-plugin");
+const path = require("path");
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: ["./browser/index.js"],
   output: {
-    path: __dirname,
-    filename: "./docs/bundle.js"
+    path: path.resolve(__dirname, "./docs"),
+    filename: "bundle.js"
   },
   devtool: "source-map",
   module: {
@@ -40,6 +43,10 @@ module.exports = {
   },
   plugins: isProd
     ? [
+        new HtmlWebpackPlugin(),
+        new DynamicCdnWebpackPlugin({
+          // verbose: true
+        }),
         new webpack.DefinePlugin({
           "process.env.NODE_ENV": JSON.stringify("production")
         }),
