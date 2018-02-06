@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Plain from "./Plain";
 import About from "./About";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const BasicExample = () => (
   <Router>
@@ -17,9 +17,10 @@ const BasicExample = () => (
       </ul>
 
       <hr />
-
-      <Route exact path="/" component={Plain} />
-      <Route path="/about" component={About} />
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route component={Plain} />
+      </Switch>
     </div>
   </Router>
 );
